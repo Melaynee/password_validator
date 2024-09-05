@@ -2,7 +2,6 @@ import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-
 @Component({
   selector: 'app-password-strength',
   standalone: true,
@@ -56,5 +55,7 @@ export class PasswordStrengthComponent {
     return 'gray';
   }
 
-  
+  preventSpace(e: KeyboardEvent) {
+    e.code === 'Space' && e.preventDefault();
+  }
 }
