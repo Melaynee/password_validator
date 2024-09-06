@@ -58,4 +58,10 @@ export class PasswordStrengthComponent {
   preventSpace(e: KeyboardEvent) {
     e.code === 'Space' && e.preventDefault();
   }
+
+  togglePassword(): void {
+    if (this.passwordVisability === 'password')
+      this.passwordVisability = 'text';
+    else this.passwordVisability = 'password';
+  }
 }
